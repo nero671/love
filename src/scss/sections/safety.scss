@@ -1,0 +1,298 @@
+.safety {
+  padding: 120px 0;
+  border-radius: 40px;
+  background: linear-gradient(88deg, #7CA9FF 1.76%, #FF77C6 98.24%), #9183ED;
+  margin-top: 120px;
+
+  @include media(1050) {
+    padding: 24px 0;
+    margin-top: 60px;
+    border-radius: 24px;
+  }
+
+  .safety__phone--1 {
+    img {
+      max-height: 581px;
+    }
+  }
+
+  .safety__phone--2 {
+    img {
+      max-height: 596px;
+    }
+  }
+
+  .safety__phone--3 {
+    img {
+      max-height: 581px;
+    }
+  }
+
+  .safety__phone--4 {
+    img {
+      max-height: 572px;
+    }
+  }
+
+  .safety__title {
+    color: #fff;
+  }
+
+  .safety__cards {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .safety__card {
+    border-radius: 32px;
+    background: #fff;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.safety__card--glass {
+      border-radius: 32px;
+      border: 1px solid #FFF;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 118.94%);
+
+      .safety__icon {
+        background: #fff;
+      }
+
+      .safety__card-title,
+      .safety__card-text {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+
+  .safety__icon {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: rgba(145, 131, 237, 0.10);
+  }
+
+  .safety__card-title {
+    color: var(--Dark, #2A2830);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-top: 24px;
+  }
+
+  .safety__card-text {
+    color: var(--Dark, #2A2830);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    opacity: 0.6;
+    margin-top: 12px;
+  }
+
+  .safety__cta-wrapper {
+    margin: 56px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 56px);
+      width: 1px;
+      height: 130px;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .safety__cta {
+    position: relative;
+    height: 56px;
+    width: 180px;
+
+
+    //&::before {
+    //  content: '';
+    //  position: absolute;
+    //  width: 100%;
+    //  height: 100%;
+    //  display: flex;
+    //  background: url('../images/ray.svg');
+    //  top: -39px;
+    //}
+    //
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  width: 100%;
+    //  height: 100%;
+    //  display: flex;
+    //  background: url('../images/ray.svg');
+    //  bottom: -39px;
+    //  margin-left: 27px;
+    //  rotate: 180deg;
+    //}
+  }
+
+
+  .safety-decor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 185px;
+    position: relative;
+    margin-bottom: -120px;
+  }
+
+  .safety__phones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+
+
+    @include media(1050) {
+      .safety__phone {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .safety__phone--1 {
+        transform: translateY(-10px);
+      }
+
+      .safety__phone--2 {
+        transform: translateY(-100px);
+      }
+
+      .safety__phone--3 {
+        transform: translateY(76px);
+      }
+
+      .safety__phone--4 {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+
+@include media(700) {
+  .safety {
+
+    .safety__cards {
+      margin-top: 43px;
+      grid-template-columns: 1fr;
+    }
+
+    .safety__card {
+      border-radius: 16px;
+      padding: 24px;
+
+      &.safety__card--glass {
+        border-radius: 16px;
+      }
+    }
+
+    .safety__icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .safety__card-title {
+      font-size: 20px;
+    }
+
+    .safety__card-text {
+      font-size: 16px;
+      color: rgba(42, 40, 48, 0.50);
+    }
+
+    .safety__cta-wrapper {
+      margin: 76px auto 0;
+
+      &::after {
+        top: calc(100% + 24px);
+        height: 60px;
+      }
+    }
+
+    .safety__cta {
+      position: relative;
+      height: 48px;
+      width: 134px;
+    }
+
+
+    .safety-decor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      position: relative;
+      margin-bottom: 20px;
+
+      svg {
+        height: 408px;
+      }
+    }
+
+    .safety__phones {
+
+      .safety__phone {
+        img {
+          width: 100%;
+          height: 216px;
+          object-fit: cover;
+
+          @include media(370) {
+            height: auto;
+          }
+        }
+      }
+
+      .safety__phone--1 {
+        transform: translateY(30px);
+      }
+
+      .safety__phone--2 {
+        transform: translateY(0);
+      }
+
+      .safety__phone--3 {
+        transform: translateY(50px);
+      }
+
+      .safety__phone--4 {
+        transform: translateY(30px);
+      }
+    }
+  }
+}

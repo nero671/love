@@ -1,0 +1,279 @@
+.about-history {
+  padding: 120px 0;
+  position: relative;
+  scrollbar-width: none;
+  will-change: transform;
+  overflow: visible;
+
+  &.scrolled {
+    overflow-y: auto;
+
+    .about-history-shadow {
+      opacity: 0;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  .about-history-mobile-img {
+    display: none;
+  }
+
+  .about-history-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 710px;
+    gap: 40px;
+    align-content: center;
+  }
+
+  .about-history-img {
+    position: relative;
+
+    picture:first-child {
+      img {
+        z-index: 2;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      border-radius: 40px;
+      transition: $standartTrans;
+
+      &:first-child {
+        z-index: 2;
+      }
+    }
+  }
+
+  .about-history__timeline {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 80px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 100%;
+      background: #F4F3FE;
+      display: flex;
+      position: absolute;
+      left: 30px;
+    }
+  }
+
+  .about-history__timeline-item {
+    opacity: 1;
+    transition: $standartTrans;
+
+    &:last-child {
+      position: relative;
+
+      &::before {
+        content: '';
+        background: #fff;
+        width: 10px;
+        height: 166px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 27px;
+      }
+    }
+
+
+  }
+
+  .about-history__timeline-item.is-active {
+    .about-history__timeline-text {
+      opacity: 1;
+    }
+
+    .about-history__download-btn {
+      opacity: 1;
+    }
+  }
+
+  .about-history__timeline-item:last-child.is-active {
+    opacity: 1;
+  }
+
+  .about-history__download-btn {
+    height: 56px;
+    width: 168px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 4;
+    opacity: 0;
+  }
+
+
+  .about-history__timeline-info-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .about-history__timeline-icon {
+      border-radius: 100px;
+      background: #F4F3FE;
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      position: relative;
+
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .about-history__timeline-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: $standartTrans;
+    opacity: 0;
+
+    .about-history__timeline-title {
+      color: #2A2830;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+    }
+
+    .about-history__timeline-desc {
+      color: #58535A;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      margin-top: 8px;
+    }
+  }
+}
+
+@include media(1050) {
+  .about-history {
+    padding: 60px 0;
+
+    .about-history__container {
+      padding: 0;
+    }
+
+
+    .about-history-mobile-img {
+      display: block;
+      height: auto;
+      margin-top: 24px;
+
+      @include media(600) {
+        height: 315px;
+        object-fit: cover;
+      }
+
+      @include media(370) {
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+    }
+
+    .about-history-wrapper {
+      grid-template-columns: 1fr;
+
+      .title {
+        text-align: center;
+      }
+    }
+
+    .about-history-img {
+      display: none;
+    }
+
+    .about-history__timeline-info-content {
+      align-items: flex-start;
+    }
+
+    .about-history__timeline {
+      margin-top: 32px;
+      gap: 32px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .about-history__timeline-item {
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .about-history__download-btn {
+      height: 56px;
+      width: 168px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 4;
+      opacity: 1;
+    }
+
+
+    .about-history__timeline-info-content {
+      .about-history__timeline-icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        position: relative;
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    .about-history__timeline-text {
+      opacity: 1;
+
+      .about-history__timeline-title {
+        font-size: 20px;
+      }
+
+      .about-history__timeline-desc {
+        font-size: 16px;
+      }
+    }
+
+    .about-history__download-btn {
+      margin: 0 auto;
+      margin-top: 32px;
+    }
+  }
+}
+
+

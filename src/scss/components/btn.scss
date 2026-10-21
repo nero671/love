@@ -1,0 +1,46 @@
+.btn {
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: linear-gradient(0deg, #FFF 0%, #FFF 100%), #FFF;
+  transition: $standartTrans;
+  height: fit-content;
+  width: fit-content;
+  color: #2A2830;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+
+  &:hover {
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%), #FFF;
+    box-shadow: 0 0 18px 0 #FF77C6;
+
+  }
+
+  &-blue {
+    border-radius: 40px;
+    background: #3279FF;
+    box-shadow: 0 0 20px 0 #FF77C6 inset;
+    color: #fff;
+
+    &:hover {
+      background: #3279FF;
+      box-shadow: 0 0 24px 0 #FF77C6, 0 0 20px 0 #FF77C6 inset;
+    }
+  }
+}
+
+.app-btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+
+  @include media(700) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

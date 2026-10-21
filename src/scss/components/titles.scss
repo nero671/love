@@ -1,0 +1,13 @@
+h2.title {
+  color: #2A2830;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 56px;
+  text-align: center;
+
+  @include media(600) {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}

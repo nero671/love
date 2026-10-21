@@ -1,0 +1,67 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+// Заголовки, общие БЄМ блоки и проче...
+[data-type] svg {
+  pointer-events: none;
+}
+
+span, p, a, b, strong, li {
+  color: inherit;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+}
+
+*::placeholder {
+  color: inherit;
+}
+
+.swiper {
+  img {
+    user-select: none;
+  }
+}
+
+.mob {
+  display: none;
+
+  @include media(700) {
+    display: block;
+  }
+}
+
+@include media(700) {
+  .desk {
+    display: none;
+  }
+}
+
+div[data-type],
+span[data-type] {
+  cursor: pointer;
+}
+
+
+//#map_with_balloon,
+//.ymaps-2-1-79-map,
+//.ymaps-2-1-79-map, {
+//  width: 789px !important;
+//  height: 646px !important;
+//}
+//
+//#map_with_balloon canvas {
+//
+//}
+
+@include media(1220) {
+  .about-history {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .steps {
+    border-radius: 0 !important;
+  }
+}
